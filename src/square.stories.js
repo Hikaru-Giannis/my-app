@@ -26,3 +26,9 @@ Crosses.args = {
   value: "X",
   onClick: () => {},
 };
+
+export const Triangle = Template.bind({});
+Triangle.args = {
+  value: "△",
+  onClick: () => {},
+};
