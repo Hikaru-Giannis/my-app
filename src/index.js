@@ -9,6 +9,7 @@ export function Square(props) {
     </button>
   );
 }
+
 export class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -83,7 +84,7 @@ export class Game extends React.Component {
   }
 
   render() {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
@@ -102,6 +103,7 @@ export class Game extends React.Component {
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
+
     return (
       <div className="game">
         <div className="game-board">
