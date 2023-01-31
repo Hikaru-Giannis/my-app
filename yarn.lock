@@ -2096,7 +2096,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-storyshots@^6.5.16":
+"@storybook/addon-storyshots@^6.5.15":
   version "6.5.16"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-6.5.16.tgz#fc36b389c222748b647ed8ecff50124175172d2e"
   integrity sha512-5pQrRM1PUtg8YM1odgUQyQeo6DDaMBF9CnIMwgioDrSBMHf+SqQ2MBgW/4GYbfrBYhhrML1d/QbbpwPJ7eb1Bg==
