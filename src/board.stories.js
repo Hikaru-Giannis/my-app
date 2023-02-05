@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Board } from "./index";
+import { Board } from "./components/Board";
 
 export default {
   component: Board,

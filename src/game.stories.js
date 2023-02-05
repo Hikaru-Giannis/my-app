@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Game } from "./index";
+import { Game } from "./components/Game";
 
 export default {
   component: Game,
