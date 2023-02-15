@@ -30,3 +30,8 @@ AllCrosses.args = {
   squares: Array(9).fill("X"),
   onClick: () => {},
 };
+export const Draw = Template.bind({});
+Draw.args = {
+  squares: ["X", "O", "O", "O", "X", "X", "X", "X", "O"],
+  onClick: () => {},
+};
