@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Board } from "./Board";
 
-export const Game = () => {
+export const Game = ({ status, setStatus }) => {
   const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
   const [stepNumber, setStepNumber] = useState(0);
   const [xIsNext, setXIsNext] = useState(true);
@@ -9,11 +9,12 @@ export const Game = () => {
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
 
-  let status;
   if (winner) {
-    status = "Winner: " + winner;
+    setStatus("Winner: " + winner);
+  } else if (current.squares.includes(null) === false) {
+    setStatus("Draw!");
   } else {
-    status = "Next player: " + (xIsNext ? "X" : "O");
+    setStatus("Next player: " + (xIsNext ? "X" : "O"));
   }
 
   const moves = history.map((step, move) => {
@@ -56,7 +57,7 @@ export const Game = () => {
         <Board squares={current.squares} onClick={(i) => handleClick(i)} />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div data-e2e="status">{status}</div>
         <ol>{moves}</ol>
       </div>
     </div>
